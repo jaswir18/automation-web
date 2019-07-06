@@ -1,6 +1,5 @@
 package com.test1.test;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.test1.test.pageObject.HomePage;

@@ -1,7 +1,5 @@
 package com.test1.test.utils;
 
-import org.testng.annotations.Test;
-
 import com.test1.test.Browser;
 
 import org.openqa.selenium.WebDriver;
