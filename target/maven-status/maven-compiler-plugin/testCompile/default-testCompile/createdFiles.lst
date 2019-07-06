@@ -1,1 +1,5 @@
-com/test1/test/HomePageTest.class
+com/test1/test/steps/PromoPageTest.class
+com/test1/test/utils/BasePage.class
+com/test1/test/steps/HomePageTest.class
+com/test1/test/utils/TestInstruement.class
+com/test1/test/pageObject/HomePage.class

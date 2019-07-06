@@ -1,1 +1,7 @@
-/Users/jaswirsiregar/eclipse-workspace/automation-web/src/test/java/com/test1/test/HomePageTest.java
+/Users/jaswirsiregar/eclipse-workspace/automation-web/src/test/java/com/test1/test/steps/HomePageTest.java
+/Users/jaswirsiregar/eclipse-workspace/automation-web/src/test/java/com/test1/test/utils/TestInstruement.java
+/Users/jaswirsiregar/eclipse-workspace/automation-web/src/test/java/com/test1/test/pageObject/HomePage.java
+/Users/jaswirsiregar/eclipse-workspace/automation-web/src/test/java/com/test1/test/pageObject/PromoPage.java
+/Users/jaswirsiregar/eclipse-workspace/automation-web/src/test/java/com/test1/test/Browser.java
+/Users/jaswirsiregar/eclipse-workspace/automation-web/src/test/java/com/test1/test/utils/BasePage.java
+/Users/jaswirsiregar/eclipse-workspace/automation-web/src/test/java/com/test1/test/steps/PromoPageTest.java

@@ -2,24 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="com.test1.test.HomePageTest" duration-ms="18619" started-at="2019-07-06T14:07:45Z" finished-at="2019-07-06T14:08:03Z">
+  <suite name="com.test1.test.steps.PromoPageTest" duration-ms="28316" started-at="2019-07-06T16:53:35Z" finished-at="2019-07-06T16:54:03Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="18619" started-at="2019-07-06T14:07:45Z" finished-at="2019-07-06T14:08:03Z">
-      <class name="com.test1.test.HomePageTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test1.test.HomePageTest@dfd3711]" name="beforeMethod" is-config="true" duration-ms="3164" started-at="2019-07-06T14:07:45Z" finished-at="2019-07-06T14:07:48Z">
+    <test name="Command line test" duration-ms="28316" started-at="2019-07-06T16:53:35Z" finished-at="2019-07-06T16:54:03Z">
+      <class name="com.test1.test.steps.PromoPageTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.test1.test.steps.PromoPageTest@26ba2a48]" name="beforeSuite" is-config="true" duration-ms="3298" started-at="2019-07-06T16:53:31Z" finished-at="2019-07-06T16:53:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.test1.test.HomePageTest@dfd3711]" name="f" duration-ms="15240" started-at="2019-07-06T14:07:48Z" finished-at="2019-07-06T14:08:03Z">
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="tapAPromo()[pri:0, instance:com.test1.test.steps.PromoPageTest@26ba2a48]" name="tapAPromo" duration-ms="28292" started-at="2019-07-06T16:53:35Z" finished-at="2019-07-06T16:54:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test1.test.HomePageTest@dfd3711]" name="afterMethod" is-config="true" duration-ms="190" started-at="2019-07-06T14:08:03Z" finished-at="2019-07-06T14:08:03Z">
+        </test-method> <!-- tapAPromo -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test1.test.steps.PromoPageTest@26ba2a48]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-07-06T16:54:03Z" finished-at="2019-07-06T16:54:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.test1.test.HomePageTest -->
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.test1.test.steps.PromoPageTest@26ba2a48]" name="afterSuite" is-config="true" duration-ms="156" started-at="2019-07-06T16:54:03Z" finished-at="2019-07-06T16:54:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.test1.test.steps.PromoPageTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- com.test1.test.HomePageTest -->
+  </suite> <!-- com.test1.test.steps.PromoPageTest -->
 </testng-results>
