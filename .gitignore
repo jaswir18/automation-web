@@ -1,0 +1,8 @@
+.settings/
+.classpath
+.project
+.DS_Store
+*.class
+target/
+test-output
+.env
