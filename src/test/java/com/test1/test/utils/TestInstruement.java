@@ -2,6 +2,8 @@ package com.test1.test.utils;
 
 import com.test1.test.Browser;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -23,6 +25,7 @@ public class TestInstruement {
 		driver = new ChromeDriver();
 		browser = new Browser(driver);
 		driver.manage().window().fullscreen();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	
