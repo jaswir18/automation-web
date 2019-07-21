@@ -2,6 +2,8 @@ package com.test1.test.pageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import com.test1.test.utils.BasePage;
 
@@ -17,7 +19,7 @@ public class HomePage extends BasePage {
 	private By flightDestinationField	= By.cssSelector("input[placeholder='Destination']");
 	private By popularCitiesAirport		= By.xpath("//span[text()='Popular Cities or Airports']");
 	
-	private By recommendedAirportOptions 		= By.xpath("//span[text()='Recommended Airports']/../../following-sibling::div");
+	private By recommendedAirportOptions 		= By.xpath("//span[text()='Recommended Airports']/../following-sibling::div");
 	private By airportSearchresult		= By.cssSelector("div.TSlys");
 	
 	private By changePassengerButton	= By.xpath("//label[text()='No. of Passengers']/following-sibling::label");
@@ -28,6 +30,8 @@ public class HomePage extends BasePage {
 	private By infantDecrementButton	= By.xpath("//span[text()='Infant']/../following-sibling::div/div[1]");
 	private By infantIncrementButton	= By.xpath("//span[text()='Infant']/../following-sibling::div/div[3]");
 	private By donePassengerChange		= By.xpath("//span[text()='Done']");
+	
+	private By searchFlightButton		= By.xpath("//button[contains(text(), 'Search Flights')]");
 
 
 	public HomePage(WebDriver driver) {
@@ -57,11 +61,13 @@ public class HomePage extends BasePage {
 	
 	public void setFlightOrigin(String airportName) {
 		typeOnElement(flightOriginField, 30, airportName);
+		delay(1500);
 		clickOnElementAtIndex(airportSearchresult, 30, 0);
 	}
 	
 	public void setFlightDestination(String airportName) {
 		typeOnElement(flightDestinationField,30, airportName);
+		delay(1500);
 		clickOnElementAtIndex(airportSearchresult, 30, 0);
 	}
 	
@@ -79,6 +85,10 @@ public class HomePage extends BasePage {
 		for (int i=1; i <= numberOfPassenger; i++) {
 			clickOnElement(By.xpath("//span[text()='"+ passngerType + "']/../following-sibling::div/div[3]"), 30);
 		}
+	}
+	
+	public void clickOnSearchFlightButton() {
+		clickOnElement(searchFlightButton, 30);
 	}
 	
 }

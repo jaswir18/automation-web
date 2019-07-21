@@ -2,6 +2,7 @@ package com.test1.test;
 
 import org.openqa.selenium.WebDriver;
 
+import com.test1.test.pageObject.FlightFullsearchPage;
 import com.test1.test.pageObject.HomePage;
 import com.test1.test.pageObject.PromoPage;
 
@@ -19,6 +20,10 @@ public class Browser {
 	
 	public PromoPage promoPage() {
 		return new PromoPage(driver);
+	}
+	
+	public FlightFullsearchPage flightFullsearchPage() {
+		return new FlightFullsearchPage(driver);
 	}
 
 }

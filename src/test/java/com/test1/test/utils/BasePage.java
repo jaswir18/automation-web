@@ -8,6 +8,7 @@ import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,11 +20,25 @@ public class BasePage {
 	
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(this.driver, this);
 	}
 	
 	public void visitPage(String url) {
 		System.out.println("Driver in BasePage" + driver.toString());
 		driver.get(url);
+	}
+	
+	public void clickOnElement(WebElement element, int timeout) {
+		WebElement elm = (new WebDriverWait(driver, timeout)).until(ExpectedConditions.elementToBeClickable(element));
+		for (int i = 0; i < timeout;) {
+			try {
+				elm.click();
+				break;
+			} catch (WebDriverException e) {
+				delay(1000);
+				i++;
+			}
+		}
 	}
 	
 	public void clickOnElement(By selector) {
@@ -37,6 +52,7 @@ public class BasePage {
 				element.click();
 				break;
 			} catch (WebDriverException e) {
+				delay(1000);
 				i++;
 			}
 		}
@@ -49,6 +65,7 @@ public class BasePage {
 				element.click();
 				break;
 			} catch (WebDriverException e) {
+				delay(1000);
 				i++;
 			}
 		}
@@ -56,12 +73,14 @@ public class BasePage {
 	
 	public void typeOnElement(By locator, int timeout, String textToType) {
 		WebElement element = (new WebDriverWait(driver, timeout)).until(ExpectedConditions.elementToBeClickable(locator));
+		// also wait until the element is interactable
 		for (int i = 0; i < timeout;) {
 			try {
 				element.clear();
 				element.sendKeys(textToType);
 				break;
 			} catch (InvalidElementStateException e) {
+				delay(1000);
 				i++;
 			}
 		}
